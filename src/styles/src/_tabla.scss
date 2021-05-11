@@ -1,0 +1,40 @@
+.mainTable {
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+  font-size: var(--font-s-normal);
+  thead {
+    background: var(--black-color);
+    th {
+      padding: 1rem 0;
+      color: var(--white-color);
+      font-weight: bold;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: var(--main-color-white);
+      }
+      td {
+        padding: 0.7rem 0;
+        text-align: center;
+        color: var(--black-color);
+      }
+    }
+  }
+  .footerTable {
+    td {
+      &:first-child,
+      &:last-child {
+        background: var(--black-color);
+        color: var(--white-color);
+        width: 150px;
+      }
+    }
+  }
+}

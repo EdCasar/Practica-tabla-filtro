@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  --main-color: #afa;
+  --main-color-white: #cfc;
+  --black-color: #222;
+  --white-color: #ccc;
+  --font-s-normal: 1.2rem;
+  --font-s-large: 1.5rem; }
+
+.mainInput {
+  display: flex;
+  justify-content: column;
+  flex-direction: center;
+  align-items: center;
+  width: 50%;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden; }
+
+.mainInput input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: .5rem;
+  color: var(--black-color); }
+
+.mainInput span {
+  position: absolute;
+  right: 5%;
+  color: var(--black-color);
+  display: flex;
+  justify-content: column;
+  flex-direction: center;
+  align-items: center; }
+
+.mainTable {
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+  font-size: var(--font-s-normal); }
+
+.mainTable thead {
+  background: var(--black-color); }
+
+.mainTable thead th {
+  padding: 1rem 0;
+  color: var(--white-color);
+  font-weight: bold; }
+
+.mainTable tbody tr:nth-child(odd) {
+  background: var(--main-color-white); }
+
+.mainTable tbody tr td {
+  padding: 0.7rem 0;
+  text-align: center;
+  color: var(--black-color); }
+
+.mainTable .footerTable td:first-child, .mainTable .footerTable td:last-child {
+  background: var(--black-color);
+  color: var(--white-color);
+  width: 150px; }
+
+body {
+  background: var(--main-color); }
+
+h1 {
+  color: var(--black-color);
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0; }

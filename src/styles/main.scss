@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+	padding: 0;
+}
+@import 'src/roots', 'src/mixins', 'src/search', 'src/tabla';
+body {
+    background: var(--main-color); 
+}
+h1{
+    color: var(--black-color);
+	width: 100%;
+	text-align: center;
+	margin: 1rem 0;
+}
