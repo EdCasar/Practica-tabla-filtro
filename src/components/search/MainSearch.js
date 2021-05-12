@@ -1,9 +1,9 @@
 import {useRef} from 'react';
 
-const MainSearch = props => {
+const MainSearch = ({ searchWord, search})=> {
   const input = useRef();
   const getSearch = () => {
-    props.searchWord(input.current.value);
+    searchWord(input.current.value);
   };
 
   return (
@@ -13,7 +13,7 @@ const MainSearch = props => {
         ref={input}
         onChange={getSearch}
         placeholder="buscar"
-        value={props.search}
+        value={search}
       />
       <span><i className="material-icons">&#xe8b6;</i></span>
     </div>

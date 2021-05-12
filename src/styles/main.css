@@ -7,6 +7,7 @@
   --main-color-white: #cfc;
   --black-color: #222;
   --white-color: #ccc;
+  --font-s-small: .9rem;
   --font-s-normal: 1.2rem;
   --font-s-large: 1.5rem; }
 
@@ -61,18 +62,24 @@
 .mainTable tbody tr td {
   padding: 0.7rem 0;
   text-align: center;
+  width: 20%;
+  overflow: auto;
   color: var(--black-color);
-  height: 50px; }
+  height: 20px; }
+
+.mainTable tbody tr td:last-child {
+  font-size: var(--font-s-small); }
 
 .mainTable .footerTable td:first-child, .mainTable .footerTable td:last-child {
   background: var(--black-color);
   color: var(--white-color);
-  width: 150px; }
+  font-size: var(--font-s-small); }
 
 .mainTable .select {
   appearance: none;
   background: var(--black-color);
-  padding: 0.3rem;
+  padding: 0.2rem;
+  margin: 0 0 0 .2rem;
   border-radius: 0.3rem;
   border: none;
   outline: none;
@@ -89,3 +96,6 @@ h1 {
   width: 100%;
   text-align: center;
   margin: 1rem 0; }
+
+.text-small {
+  font-size: var(--font-s-small); }
