@@ -61,12 +61,25 @@
 .mainTable tbody tr td {
   padding: 0.7rem 0;
   text-align: center;
-  color: var(--black-color); }
+  color: var(--black-color);
+  height: 50px; }
 
 .mainTable .footerTable td:first-child, .mainTable .footerTable td:last-child {
   background: var(--black-color);
   color: var(--white-color);
   width: 150px; }
+
+.mainTable .select {
+  appearance: none;
+  background: var(--black-color);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  color: var(--white-color); }
+
+.mainTable .select option {
+  color: var(--white-color); }
 
 body {
   background: var(--main-color); }

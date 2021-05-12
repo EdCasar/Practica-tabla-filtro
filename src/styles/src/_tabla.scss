@@ -24,6 +24,7 @@
         padding: 0.7rem 0;
         text-align: center;
         color: var(--black-color);
+        height: 50px;
       }
     }
   }
@@ -35,6 +36,18 @@
         color: var(--white-color);
         width: 150px;
       }
+    }
+  }
+  .select {
+    appearance: none;
+    background: var(--black-color);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    color: var(--white-color);
+    option {
+      color: var(--white-color);
     }
   }
 }

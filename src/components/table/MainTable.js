@@ -35,7 +35,7 @@ const MainTable = () => {
         <HeadTable />
         <BodyTable
           users={search.length < 1 ? users : results}
-          search={search}
+	      change={search.length > 0 ? results : null}
         />
       </table>
     </>
