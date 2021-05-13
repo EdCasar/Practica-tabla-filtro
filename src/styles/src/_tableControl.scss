@@ -1,0 +1,56 @@
+.tableControl {
+  @include flex(row, space-around);
+  width: 90%;
+  padding: .5rem 0;
+  margin: 1rem auto;
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+
+  .itemControl {
+    p {
+      font-size: var(--font-s-small);
+    }
+  }
+  .itemSelect {
+
+    @include flex(column, center);
+    select {
+
+    @include flex(column, center);
+      appearance: none;
+      background: var(--black-color);
+      padding: 0.2rem;
+      margin: 0 0 0 0.2rem;
+      border-radius: 0.3rem;
+      border: none;
+      outline: none;
+      color: var(--white-color);
+      option {
+        color: var(--white-color);
+      }
+    }
+	p{
+    font-size: var(--font-s-small);
+	}
+  }
+  .next-prev {
+    background: var(--black-color);
+    padding: 0.7rem;
+    p {
+      color: var(--white-color);
+      font-size: var(--font-s-small);
+    }
+	border-width: 0 0 2px 0;
+	border-color: transparent;
+	border-style: solid;
+	&:hover{
+		border-color: #6af;
+	}
+  }
+  .next{
+	  @include border-radius(0, .6rem, .6rem, 0)
+  }
+  .prev{
+	  @include border-radius(.6rem, 0, 0, .6rem)
+  }
+}

@@ -1,19 +1,15 @@
-import {useRef} from 'react';
 
-const MainSearch = ({ searchWord, search})=> {
-  const input = useRef();
-  const getSearch = () => {
-    searchWord(input.current.value);
+const MainSearch = ({ searchInAll })=> {
+  const getSearch = (e) => {
+    searchInAll(e.target.value);
   };
 
   return (
     <div className="mainInput">
       <input
         type="text"
-        ref={input}
         onChange={getSearch}
-        placeholder="buscar"
-        value={search}
+        placeholder="Buscar en todos los campos"
       />
       <span><i className="material-icons">&#xe8b6;</i></span>
     </div>

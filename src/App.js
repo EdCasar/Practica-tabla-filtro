@@ -1,9 +1,9 @@
-import MainTable from './components/table/MainTable'
+import MainUsers from './pages/usersList/MainUsers'
 
 function App() {
   return (
     <div className="App">
-	  <MainTable />
+	  <MainUsers />
     </div>
   );
 }

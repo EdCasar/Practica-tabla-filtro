@@ -1,22 +1,15 @@
 .mainInput {
-    @include flex(column, center);
-	width: 50%;
-	margin: 2rem auto;
-	position: relative;
-	
-	border-radius: 1rem;
-	overflow: hidden;
-	input{
-      width: 100%;
-	  border: none;
-	  outline: none;
-	  padding: .5rem;
-	  color: var(--black-color);
-	}
-	span{
-       position: absolute;
-	   right: 5%;
-	   color: var(--black-color);
-	   @include flex(column, center)
-	}
+  @include inputs(70%);
+  margin: 1rem auto;
+}
+
+.mainAllInputs {
+	@include flex(row, space-around);
+	width: 90%;
+  margin: .3rem auto;
+  flex-wrap: wrap;
+  .inputFields {
+    @include inputs(150px);
+	margin: .2rem;
+  }
 }

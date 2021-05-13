@@ -1,7 +1,39 @@
-@mixin flex($justify, $direction){
+@mixin flex($direction, $justify){
     display: flex;
 	justify-content: $justify;
 	flex-direction: $direction;
 	align-items: center;
 }
 
+@mixin inputs($width){
+  @include flex(row, center);
+  width: $width;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: var(--black-color);
+	text-align: center;
+	transition: .5s;
+	border-width: 0 0 2px 0;
+	border-color: transparent;
+	border-style: solid;
+	&:focus{
+		border-color: #6af;
+	}
+  }
+  span {
+    position: absolute;
+    right: 5%;
+    color: var(--black-color);
+    @include flex(column, center);
+  }
+    
+}
+@mixin border-radius($t: .5rem, $r: .5rem, $b: .5rem, $l: .5rem){
+    border-radius: $t $r $b $l;  
+}
