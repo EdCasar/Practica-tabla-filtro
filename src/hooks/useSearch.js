@@ -1,14 +1,14 @@
 import {useEffect, useState} from 'react';
 // import getUsers from '../services/getUsers';
 
-const useSearch = users => {
+const useSearch = data => {
   const [dataIn, setDataIn] = useState();
   const [search, setSearch] = useState('');
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    setDataIn(users);
-  }, [users]);
+    setDataIn(data);
+  }, [data]);
 
   //Filtrando en todos los campos
   const setSearchInAllHook = word => {
@@ -27,12 +27,12 @@ const useSearch = users => {
   };
 
   //Filtrando en cada campo
-  const setSearchInFiledsHook = (word, key) => {
+  const setSearchInFieldsHook = (word, key) => {
     setSearch(word);
     if (word) {
       const searchForFields = dataIn.filter(data => {
-        //si la key es de tipo número lo convertimos a string
-        if (key === 'id') {
+        if (typeof data.[key] === 'number') {
+          //si el objeto contine datos de tipo número lo convertimos a string
           return data.[key].toString().includes(word.toLowerCase());
         } else {
           return data.[key].toLowerCase().includes(word.toLowerCase());
@@ -43,6 +43,6 @@ const useSearch = users => {
       setResults(dataIn);
     }
   };
-  return [dataIn, results, search, setSearchInAllHook, setSearchInFiledsHook];
+  return [ results, search, setSearchInAllHook, setSearchInFieldsHook];
 };
 export default useSearch;

@@ -182,8 +182,65 @@
 .tableControl .prev {
   border-radius: 0.6rem 0 0 0.6rem; }
 
+.calculadora {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 120px;
+  background: var(--main-color-white);
+  padding: 1rem;
+  margin: auto; }
+
+.calculadora input,
+.calculadora button {
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: none;
+  width: 90%;
+  outline: none;
+  padding: 0.4rem;
+  margin: 0.3rem 0;
+  font-size: var(font-s-normal);
+  color: var(--black-color);
+  text-align: center;
+  font-weight: bold; }
+
+.calculadora button {
+  background: var(--black-color);
+  color: var(--white-color); }
+
+.calculadora select {
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.3rem;
+  appearance: none;
+  outline: none;
+  font-weight: bold;
+  background: var(--main-color);
+  border: none; }
+
+.calculadora label {
+  font-size: var(--font-s-small);
+  color: var(--gray-color);
+  margin: 0.1rem 0; }
+
+.calculadora input,
+.calculadora button,
+.calculadora select {
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent; }
+
+.calculadora input:focus, .calculadora input:hover,
+.calculadora button:focus,
+.calculadora button:hover,
+.calculadora select:focus,
+.calculadora select:hover {
+  border-color: #6af; }
+
 body {
-  background: var(--main-color); }
+  background: var(--main-color);
+  position: relative; }
 
 h1 {
   color: var(--black-color);
@@ -193,3 +250,13 @@ h1 {
 
 .text-small {
   font-size: var(--font-s-small); }
+
+.links {
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  text-decoration: none;
+  background: var(--black-color);
+  padding: .3rem;
+  color: var(--white-color);
+  position: absolute;
+  left: 1rem;
+  top: 1rem; }

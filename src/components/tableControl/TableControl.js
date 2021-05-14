@@ -1,4 +1,4 @@
-const TableControl = ({totalData, countPage, users, resultsForPage, handleSelect, prevPage, nextPage}) => {
+const TableControl = ({totalData, countPage, data, resultsForPage, handleSelect, prevPage, nextPage}) => {
   return (
     <section className="tableControl">
       <div className="next-prev prev" onClick={prevPage}>
@@ -24,7 +24,7 @@ const TableControl = ({totalData, countPage, users, resultsForPage, handleSelect
       </div>
       <div className="itemControl">
         <p>
-          <b>Total registros: </b> {users ? users.length : 0}{' '}
+          <b>Total registros: </b> {data ? data.length : 0}{' '}
         </p>
       </div>
       <div className="next-prev next" onClick={nextPage}>

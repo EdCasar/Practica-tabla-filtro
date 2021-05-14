@@ -2,9 +2,10 @@
     margin: 0;
 	padding: 0;
 }
-@import 'src/roots', 'src/mixins', 'src/search', 'src/tabla', 'src/tableControl';
+@import 'src/roots', 'src/mixins', 'src/search', 'src/tabla', 'src/tableControl', 'src/calculadora';
 body {
     background: var(--main-color); 
+	position: relative;
 }
 h1{
     color: var(--black-color);
@@ -14,4 +15,15 @@ h1{
 }
 .text-small{
     font-size: var(--font-s-small);
+}
+.links{
+	@include border-radius();
+	text-decoration: none;
+    background: var(--black-color); 
+	padding: .3rem;
+	color: var(--white-color);
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	
 }

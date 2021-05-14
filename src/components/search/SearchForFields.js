@@ -1,14 +1,13 @@
-
-const SearchForFields = ({ searchInFields , searchFor, name})=> {
-  const getSearch = (e) => {
+const SearchForFields = ({searchInFields, searchFor, name, inputType}) => {
+  const getSearch = e => {
     searchInFields(e.target.value, e.target.name);
   };
 
   return (
     <div className="inputFields">
       <input
-        type="text"
-	    name={searchFor}
+        type={inputType ? inputType : 'text'}
+        name={searchFor}
         onChange={getSearch}
         placeholder={`Buscar por ${name}`}
       />
@@ -16,4 +15,3 @@ const SearchForFields = ({ searchInFields , searchFor, name})=> {
   );
 };
 export default SearchForFields;
-

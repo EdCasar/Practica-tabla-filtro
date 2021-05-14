@@ -1,0 +1,48 @@
+.calculadora {
+  @include flex(column, flex-start);
+  @include border-radius();
+  width: 120px;
+  background: var(--main-color-white);
+  padding: 1rem;
+  margin: auto;
+  input,
+  button {
+    @include border-radius();
+    border: none;
+    width: 90%;
+    outline: none;
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    font-size: var(font-s-normal);
+    color: var(--black-color);
+    text-align: center;
+    font-weight: bold;
+  }
+  button {
+    background: var(--black-color);
+    color: var(--white-color);
+  }
+  select {
+    @include border-radius() padding: 0.3rem;
+    appearance: none;
+    outline: none;
+    font-weight: bold;
+    background: var(--main-color);
+    border: none;
+  }
+  label {
+    font-size: var(--font-s-small);
+    color: var(--gray-color);
+    margin: 0.1rem 0;
+  }
+  input,
+  button,
+  select {
+	  border-width: 2px;
+	  border-style: solid;
+	  border-color: transparent;
+    &:focus, &:hover{
+      border-color: #6af;
+    }
+  }
+}
