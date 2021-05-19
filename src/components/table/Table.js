@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import TableControl from '../tableControl/TableControl';
 
-
 const Table = ({data, change, heads, baseFiels, showControls}) => {
   const [page, setPage] = useState(0);
   const [resultsForPage, setResultsPage] = useState(5);
@@ -17,13 +16,8 @@ const Table = ({data, change, heads, baseFiels, showControls}) => {
     }
   }, [change]);
 
-  const pageData= () => {
-    if (data) {
-      return data.slice(page, page + resultsForPage);
-	}
-	else{
-      return null
-	}
+  const pageData = () => {
+    if (data) return data.slice(page, page + resultsForPage);
   };
   const nextPage = () => {
     //mientras la paginación "page" sea menor que el resultsForPage de usuarios se mostrarán mas páginas
@@ -51,22 +45,22 @@ const Table = ({data, change, heads, baseFiels, showControls}) => {
           </tr>
         </thead>
         <tbody>
-          {pageData() ? (
-            pageData().map((data , i)=> (
+          { data ? (
+            pageData().map((data, i) => (
               <tr key={i}>
-				{
-				baseFiels.map((f, i) => <td key={i}>{data.[f]}</td>)
-				}
+                {baseFiels.map((f, i) => (
+                  <td key={i}>{data[f]}</td>
+                ))}
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan={heads.length} >No se encontraron resultados</td>
+              <td colSpan={heads.length}>No se encontraron resultados</td>
             </tr>
           )}
         </tbody>
       </table>
-      {showControls ? (
+      {showControls && data  ? (
         <TableControl
           totalData={totalData}
           resultsForPage={resultsForPage}

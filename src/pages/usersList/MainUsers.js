@@ -11,7 +11,7 @@ const MainUsers = () => {
   const [data, setData] = useState();
   const [ results, search, setSearchInAllHook, setSearchInFieldsHook, ] = useSearch(data); 
   useEffect(() => {
-    getUsers().then(user => setData(user));
+    getUsers().then(user => setData(user)); 
   }, []);
 
   const searchInAll = word => {
