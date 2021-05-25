@@ -13,3 +13,13 @@
 	margin: .2rem;
   }
 }
+.mainRegister {
+	@include flex(column, flex-start);
+	width: 90%;
+  margin: .3rem auto;
+  flex-wrap: wrap;
+  .inputFields {
+    @include inputs(150px);
+	margin: .2rem;
+  }
+}

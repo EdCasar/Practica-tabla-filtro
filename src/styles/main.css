@@ -3,14 +3,30 @@
   padding: 0; }
 
 :root {
-  --main-color: #afa;
-  --main-color-white: #cfc;
-  --black-color: #222;
-  --gray-color: #888;
-  --white-color: #ccc;
-  --font-s-small: .9rem;
+  --font-s-small: 0.9rem;
   --font-s-normal: 1.2rem;
   --font-s-large: 1.5rem; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #222;
+    --main-color-white: #0af;
+    --black-color: #ddd;
+    --gray-color: #888;
+    --white-color: #333;
+    --main-color: #dff;
+    --main-color-white: #aff;
+    --black-color: #222;
+    --gray-color: #888;
+    --white-color: #ddd; } }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: #dff;
+    --main-color-white: #aff;
+    --black-color: #222;
+    --gray-color: #888;
+    --white-color: #ddd; } }
 
 .mainInput {
   display: flex;
@@ -28,7 +44,7 @@
   border: none;
   outline: none;
   padding: 0.5rem;
-  color: var(--black-color);
+  color: #222;
   text-align: center;
   transition: .5s;
   border-width: 0 0 2px 0;
@@ -41,7 +57,7 @@
 .mainInput span {
   position: absolute;
   right: 5%;
-  color: var(--black-color);
+  color: #222;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -72,7 +88,7 @@
   border: none;
   outline: none;
   padding: 0.5rem;
-  color: var(--black-color);
+  color: #222;
   text-align: center;
   transition: .5s;
   border-width: 0 0 2px 0;
@@ -85,7 +101,51 @@
 .mainAllInputs .inputFields span {
   position: absolute;
   right: 5%;
-  color: var(--black-color);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.mainRegister {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: .3rem auto;
+  flex-wrap: wrap; }
+
+.mainRegister .inputFields {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: .2rem; }
+
+.mainRegister .inputFields input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  color: #222;
+  text-align: center;
+  transition: .5s;
+  border-width: 0 0 2px 0;
+  border-color: transparent;
+  border-style: solid; }
+
+.mainRegister .inputFields input:focus {
+  border-color: #6af; }
+
+.mainRegister .inputFields span {
+  position: absolute;
+  right: 5%;
+  color: #222;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -128,13 +188,14 @@
   flex-direction: row;
   align-items: center;
   width: 90%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   margin: 1rem auto;
   border-top: 1px solid var(--gray-color);
   border-bottom: 1px solid var(--gray-color); }
 
 .tableControl .itemControl p {
-  font-size: var(--font-s-small); }
+  font-size: var(--font-s-small);
+  color: var(--black-color); }
 
 .tableControl .itemSelect {
   display: flex;
@@ -160,7 +221,8 @@
   color: var(--white-color); }
 
 .tableControl .itemSelect p {
-  font-size: var(--font-s-small); }
+  font-size: var(--font-s-small);
+  color: var(--black-color); }
 
 .tableControl .next-prev {
   background: var(--black-color);
@@ -202,7 +264,7 @@
   padding: 0.4rem;
   margin: 0.3rem 0;
   font-size: var(font-s-normal);
-  color: var(--black-color);
+  color: #222;
   text-align: center;
   font-weight: bold; }
 
@@ -217,11 +279,12 @@
   outline: none;
   font-weight: bold;
   background: var(--main-color);
+  color: #ddd;
   border: none; }
 
 .calculadora label {
   font-size: var(--font-s-small);
-  color: var(--gray-color);
+  color: #222;
   margin: 0.1rem 0; }
 
 .calculadora input,

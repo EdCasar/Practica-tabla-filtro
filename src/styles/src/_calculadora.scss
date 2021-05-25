@@ -14,7 +14,7 @@
     padding: 0.4rem;
     margin: 0.3rem 0;
     font-size: var(font-s-normal);
-    color: var(--black-color);
+    color: $black-color; 
     text-align: center;
     font-weight: bold;
   }
@@ -23,16 +23,18 @@
     color: var(--white-color);
   }
   select {
-    @include border-radius() padding: 0.3rem;
+    @include border-radius();
+	padding: 0.3rem;
     appearance: none;
     outline: none;
     font-weight: bold;
     background: var(--main-color);
+	color: $white-color;
     border: none;
   }
   label {
     font-size: var(--font-s-small);
-    color: var(--gray-color);
+    color: $black-color;
     margin: 0.1rem 0;
   }
   input,

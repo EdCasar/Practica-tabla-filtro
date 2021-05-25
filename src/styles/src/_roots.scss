@@ -1,12 +1,30 @@
+$black-color: #222;
+$white-color: #ddd;
+$gray-color: #888;
+$main-color: #a7a;
+$main-color-white: #cfc;
 :root {
-    --main-color: #afa;
-	--main-color-white: #cfc;
-	--black-color: #222;
-	--gray-color: #888;
-	--white-color: #ccc;
+	@media (prefers-color-scheme: dark) {
+		--main-color: #222;
+		--main-color-white: #0af;
+		--black-color: #ddd;
+		--gray-color: #888;
+		--white-color: #333;
 
-	--font-s-small: .9rem;
+		--main-color: #dff;
+		--main-color-white: #aff;
+		--black-color: #222;
+		--gray-color: #888;
+		--white-color: #ddd;
+	}
+	@media (prefers-color-scheme: light) {
+		--main-color: #dff;
+		--main-color-white: #aff;
+		--black-color: #222;
+		--gray-color: #888;
+		--white-color: #ddd;
+	}
+	--font-s-small: 0.9rem;
 	--font-s-normal: 1.2rem;
 	--font-s-large: 1.5rem;
 }
-

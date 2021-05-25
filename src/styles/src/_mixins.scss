@@ -16,7 +16,7 @@
     border: none;
     outline: none;
     padding: 0.5rem;
-    color: var(--black-color);
+    color: $black-color;
 	text-align: center;
 	transition: .5s;
 	border-width: 0 0 2px 0;
@@ -29,7 +29,7 @@
   span {
     position: absolute;
     right: 5%;
-    color: var(--black-color);
+    color: $black-color;
     @include flex(column, center);
   }
     

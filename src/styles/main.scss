@@ -1,29 +1,29 @@
 *{
-    margin: 0;
+	margin: 0;
 	padding: 0;
 }
 @import 'src/roots', 'src/mixins', 'src/search', 'src/tabla', 'src/tableControl', 'src/calculadora';
 body {
-    background: var(--main-color); 
+	background: var(--main-color); 
 	position: relative;
 }
 h1{
-    color: var(--black-color);
+	color: var(--black-color);
 	width: 100%;
 	text-align: center;
 	margin: 1rem 0;
 }
 .text-small{
-    font-size: var(--font-s-small);
+	font-size: var(--font-s-small);
 }
 .links{
 	@include border-radius();
 	text-decoration: none;
-    background: var(--black-color); 
+	background: var(--black-color); 
 	padding: .3rem;
 	color: var(--white-color);
 	position: absolute;
 	left: 1rem;
 	top: 1rem;
-	
+
 }
